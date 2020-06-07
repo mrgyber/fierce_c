@@ -1,13 +1,12 @@
 # fierce_c
+
 fierce_c is an incomplete analogue of [fierce](https://github.com/mschwager/fierce) written in C
 (a DNS reconnaissance tool for locating non-contiguous IP space).
 
-# Download
-Check the `bin` folder. There are precompiled versions for Windows, Linux and MacOS.
-
 # Usage
+
 ```text
-Syntax: dns [options]
+Syntax: fierce_c [options]
 OPTIONS:
         -help:    print help
         -host:    hostname
@@ -17,13 +16,15 @@ OPTIONS:
         -timeout: timeout for each request
 
 EXAMPLE:
-        dns -host example.ru
-        dns -host example.ru -dns 8.8.8.8 -file dict/5000.txt -threads 8 -timeout 0.1
+        fierce_c -host ifmo.ru
+        fierce_c -host ifmo.ru -dns 8.8.8.8 -file dict/5000.txt -threads 8 -timeout 0.1
 ```
+
 ##### Output example:
+
 ```text
-$ ./dns -host ifmo.ru      (Linux | MacOS)
-$ dns.exe -host ifmo.ru    (Windows)
+$ ./fierce_c -host ifmo.ru      (Linux | MacOS)
+$ fierce_c.exe -host ifmo.ru    (Windows)
 
 DNS Servers for ifmo.ru:
     ns.ifmo.ru.
@@ -46,4 +47,5 @@ Performing 5000 tests...
 ```
 
 # Valgrind
+
 There are no memory management and threading bugs
